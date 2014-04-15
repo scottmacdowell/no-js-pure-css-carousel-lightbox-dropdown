@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset = "UTF-8" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<title>No JS, Pure CSS/HTML Carousel + Lightbox + Dropdown Menu</title>
+</head>
+
+<body>
+<section id="nojs-pure-css-carousel">
+	<div> 
+		<h1>NO JS, Pure CSS3/HTML Carousel.</h1>
+		<article>
+			<!-- Hidden inputs to control carousel -->
+			<input checked type="radio" name="no-js-pure-css-html-carousel" id="slide1">
+			<input type="radio" name="no-js-pure-css-html-carousel" id="slide2">
+			<input type="radio" name="no-js-pure-css-html-carousel" id="slide3">
+			<input type="radio" name="no-js-pure-css-html-carousel" id="slide4">
+			<input type="radio" name="no-js-pure-css-html-carousel" id="slide5">
+			<input type="radio" name="no-js-pure-css-html-carousel" id="slide6">
+			<input type="radio" name="no-js-pure-css-html-carousel" id="slide7">
+			<input type="radio" name="no-js-pure-css-html-carousel" id="slide8">
+
+			<div>
+				<span>
+					<h1>Slide 1</h1>
+					<p>No JS here.</p>
+					<p>This guy is running on CSS and HTML</p> 
+					<p>Great for progressive enhancement or simple one-off carousels!</p>
+				</span>
+				<span>
+					<h1>Slide 2</h1>
+					<p>Curious how it works?</p>
+					<p>It is actually pretty simple.</p> 
+					<p>The magic lies withing radio inputs and css3 animations!</p>
+				</span>
+				<span>
+					<h1>Slide 3</h1>
+					<p>Each slide is assigned it's own radio input.</p>
+					<p>When an input's status is "checked", it is positioned within the visible window on the inner container.</p> 
+					
+				</span>
+				<span>
+					<h1>Slide 4</h1>
+					<p>You can't see the actual radio buttons though! They are all set to "display: none;"</p>
+					<p>So now you're probably thinking "How can you click something that is hidden?"</p> 
+					<p>Labels!</p>
+				</span>
+				<span>
+					<h1>Slide 5</h1>
+					<p>The previous & next arrows + the pagination buttons are all labels associated with a slide.</p>
+					<p>For each slide there are 2 labels</p> 
+					<p>1 label to control the previous and next functionality, and another label to control pagination.</p>
+				</span>
+				<span>
+					<h1>Slide 6</h1>
+					<p>That sounds confusing right? Don't worry, it is pretty simple.</p>
+					<p>Right now the 6th radio button is checked (we're on slide 6). So use the "nth-child(5)" pseudo-selector to style the previous button, and the "nth-child(7)" pseudo-selector to style the next button.</p> 
+					<p>Each time a slide is checked and showed, the previous and next slides' labels are show accordingly.</p>
+				</span>
+				<span>
+					<h1>Slide 7</h1>
+					<p>Pagination works the same way.</p>
+					<p>When a radio button is checked, it's pagination label is styled to active.</p> 
+					<p>Conversely, the other slides are unchecked and show the default style.</p>
+					<p> Throw some animation on the inner container and boom, you're done!</p>
+				</span>
+			</div>
+
+			<!-- Prev/Next Controls -->
+			<aside>Previous & Next Controls:
+				<label for="slide1">Slide 1</label>
+				<label for="slide2">Slide 2</label>
+				<label for="slide3">Slide 3</label>
+				<label for="slide4">Slide 4</label>
+				<label for="slide5">Slide 5</label>
+				<label for="slide6">Slide 6</label>
+				<label for="slide7">Slide 7</label>
+			</aside>
+
+			<!-- Pagination Controls -->
+			<menu>Pagination Controls:
+				<label for="slide1">Slide 1</label>
+				<label for="slide2">Slide 2</label>
+				<label for="slide3">Slide 3</label>
+				<label for="slide4">Slide 4</label>
+				<label for="slide5">Slide 5</label>
+				<label for="slide6">Slide 6</label>
+				<label for="slide7">Slide 7</label>
+			</menu>
+		</article>
+	</div>
+</section>
+
+<section id="nojs-pure-css-lightbox">
+	<div> 
+		<article>
+			<h1>NO JS, Pure CSS3/HTML LightBox.</h1>
+
+			<p>This version of the pure CSS/HTML lightbox also uses radio buttons to toggle activation.
+			Each image thumbnail is wrapped in a label. When checked, the large version fades in. The trick here is to set a default "checked" on the background overlay to hide it. Meaning, when no image is checked, the overlay is hidden.</p>
+			
+			<label for="image1">
+				<h3>Image 1</h3>
+				<img src="images/image1.jpg">
+			</label>
+			<label for="image1">
+				<h3>Image 2</h3>
+				<img src="images/image2.jpg">
+			</label>
+			<label for="image3">
+				<h3>Image 3</h3>
+				<img src="images/image3.jpg">
+			</label>
+
+			<aside>
+				<!--Background radio button. Defaulted to checked. (hidden) -->
+				<input checked type="radio" name="images" id="images_off">
+				<!-- Actuall background. When clicked it hides it -->
+				<label for='images_off'></label>
+
+				<input type="radio" name="images" id="image1">
+				<span>
+					<!-- Close Button -->
+					<label for='images_off'></label>
+					<img src="images/image1.jpg">
+				</span>
+				
+				<input type="radio" name="images" id="image2">
+				<span>
+					<!-- Close Button -->
+					<label for='images_off'></label>
+					<img src="images/image2.jpg">
+				</span>	
+
+				<input type="radio" name="images" id="image3">
+				<span>
+					<!-- Close Button -->
+					<label for='images_off'></label>
+					<img src="images/image3.jpg">
+				</span>	
+			</aside>
+		</article>
+	</div>
+</section>
+
+<nav>
+	<div>
+
+		<a href="http://www.scottwillcode.com">Check out my home page.</a>
+		<menu>Main Menu
+			<ul>
+				<li><a href="https://github.com/scottmacdowell?tab=repositories">My GitHub</a></li>
+			 	<li><a href="https://github.com/scottmacdowell/no-js-pure-css-carousel-lightbox-dropdown">This Project</a></li>
+				<li><a href="http://www.scottwillcode.com">My Website</a></li>
+				<li><a href="https://twitter.com/scott_macdowell">My Twitter</a></li>
+			</ul>
+		</menu>
+		<h2>Check out this NO JS dropdown menu:</h2>
+	</div>
+</nav>
+</body>
+</html>
